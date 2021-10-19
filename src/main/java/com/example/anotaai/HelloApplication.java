@@ -18,7 +18,7 @@ public class HelloApplication extends Application {
     }
 
     public static void main(String[] args) {
-        DBUtil.createBasicDB();
+      ///  DBUtil.createBasicDB();
         launch(args);
     }
 }
