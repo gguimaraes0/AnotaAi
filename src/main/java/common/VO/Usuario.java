@@ -1,10 +1,16 @@
-package Common.VO;
-import Common.generic.model;
+package common.VO;
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import common.generic.model;
 
-@Entity(name = "Usuarios")
-public class User extends model {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+@Entity(name = "Usuario")
+public class Usuario extends model {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -38,16 +44,4 @@ public class User extends model {
     public void setPassword(String password) {
         this.password = password;
     }
-//    public Despesa getDespesa() {
-//        return despesa;
-//    }
-//    public void setDespesa(Despesa despesa) {
-//        this.despesa = despesa;
-//    }
-//    public Receita getReceita() {
-//        return receita;
-//    }
-//    public void setReceita(Receita receita) {
-//        this.receita = receita;
-//    }
 }

@@ -3,15 +3,11 @@
              xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
     <persistence-unit name="AnotaAiDB">
-        <class>common.VO.User</class>
-        <class>common.VO.Role</class>
-        <class>common.VO.Area</class>
-        <class>common.VO.GradesUserSubject</class>
-        <class>common.VO.GradeTypes</class>
-        <class>common.VO.Structure</class>
-        <class>common.VO.Subject</class>
-        <class>common.VO.UserSubject</class>
-
+        <class>common.VO.Usuario</class>
+        <class>common.VO.Despesa</class>
+        <class>common.VO.Receita</class>
+        <class>common.VO.Tipo</class>
+        <class>common.VO.InstituicaoPagamento</class>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/AnotaAiDB?serverTimezone=UTC" />

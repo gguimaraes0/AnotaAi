@@ -3,20 +3,20 @@ import Common.generic.model;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
-@Entity(name = "InstituicaoPagamento")
+@Entity(name = "Tipo")
 public class Despesa extends model {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idInstituicaoPagamento;
+    private int idTipo;
 
     private String nome;
 
-    public int getIdInstituicaoPagamento() {
-        return idInstituicaoPagamento;
+    public int getIdTipo() {
+        return idTipo;
     }
-    public void setIdInstituicaoPagamento(int idInstituicaoPagamento) {
-        this.idInstituicaoPagamento = idInstituicaoPagamento;
+    public void setIdTipo(int idTipo) {
+        this.idTipo = idTipo;
     }
     public String getNome() {
         return nome;

@@ -1,14 +1,20 @@
-package Common.VO;
-import Common.generic.model;
+package common.VO;
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import common.generic.model;
 
-@Entity(name = "Despesa")
-public class Despesa extends model {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+@Entity(name = "Receita")
+public class Receita extends model {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idDespesa;
+    private int idReceita;
 
     @ManyToOne(optional = false)
     private Usuario usuario;
@@ -19,24 +25,24 @@ public class Despesa extends model {
     @ManyToOne(optional = false)
     private Tipo tipo;
 
-    private String data_vencimento;
+    private String data_recebimento;
 
     @ManyToOne(optional = false)
     private InstituicaoPagamento instituicao_pagamento;
 
-    private double pago;
+    private double recebido;
 
-    public int getIdDespesa() {
-        return idDespesa;
+    public int getIdReceita() {
+        return idReceita;
     }
-    public void setIdDespesa(int idDespesa) {
-        this.idDespesa = idDespesa;
+    public void setIdReceita(int idReceita) {
+        this.idReceita = idReceita;
     }
-    public Usuario getIdUsuario(){
+    public Usuario getUsuario(){
         return  usuario;
     }
-    public void setIdUsuario(int idUsuario){
-        this.idUsuario = idUsuario;
+    public void setUsuario(Usuario usuario){
+        this.usuario = usuario;
     }
     public String getDescricao(){
         return descricao;
@@ -62,16 +68,16 @@ public class Despesa extends model {
     public void setData_recebimento(String data_recebimento) {
         this.data_recebimento = data_recebimento;
     }
-    public int getInstituicaoPagamento() {
+    public InstituicaoPagamento getInstituicaoPagamento() {
         return instituicao_pagamento;
     }
     public void setInstituicaoPagamento(InstituicaoPagamento instituicao_pagamento) {
         this.instituicao_pagamento = instituicao_pagamento;
     }
-    public double getPago() {
-        return pago;
+    public double getRecebido() {
+        return recebido;
     }
-    public void setPago(double pago) {
-        this.pago = pago;
+    public void setRecebido(double recebido) {
+        this.recebido = recebido;
     }
 }
