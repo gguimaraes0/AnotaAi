@@ -14,11 +14,9 @@
          <children>
             <Pane layoutX="119.0" layoutY="110.0" prefHeight="434.0" prefWidth="704.0" style="-fx-background-color: #5b5b5b;">
                <children>
-                  <JFXButton fx:id="btn_Login" layoutX="284.0" onMouseClicked="#btn_Login_Click" layoutY="242.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="136.0" text="LOGIN" />
-                  <JFXButton fx:id="btn_CanastaLogin" onMouseClicked="#btn_CanastaLogin_Click" layoutX="284.0" layoutY="314.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="136.0" text="CADASTRAR" />
                   <ImageView fitHeight="166.0" fitWidth="282.0" layoutX="216.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="../Logo.png" />
+                        <Image url="../../../../../../../../AnotaAi2/AnotaAi/src/Front/Logo.png" />
                      </image>
                   </ImageView>
                </children>
