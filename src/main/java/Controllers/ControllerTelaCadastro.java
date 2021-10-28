@@ -35,11 +35,11 @@ public class ControllerTelaCadastro extends HelloApplication {
         String email = txt_Email.getText();
         String senha = txt_Senha.getText();
 
-        if (nome.isEmpty())
-            campoEmBrancoCadastro("nome");
-
-        else if (email.isEmpty() || !email.matches("\\S+@\\S+\\.\\S+"))
+        if (email.isEmpty() || !email.matches("\\S+@\\S+\\.\\S+"))
             campoEmBrancoCadastro("email");
+
+        else if (nome.isEmpty())
+            campoEmBrancoCadastro("nome");
 
         else if (senha.isEmpty())
             campoEmBrancoCadastro("senha");
@@ -49,8 +49,7 @@ public class ControllerTelaCadastro extends HelloApplication {
     }
 
     public void campoEmBrancoCadastro(String campo) {
-        Alert a = new Alert(Alert.AlertType.NONE);
-        a.setAlertType(Alert.AlertType.WARNING);
+        Alert a = new Alert(Alert.AlertType.WARNING);
         a.setContentText("Não esqueça de preencher corretamente o campo " + campo);
         a.showAndWait();
     }
