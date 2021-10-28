@@ -8,8 +8,8 @@
          <children>
             <Pane layoutY="-5.0" prefHeight="365.0" prefWidth="396.0" style="-fx-background-color: #87CEFA;">
                <children>
-                  <Button id="btnLogin" onMouseClicked="#btnLogin_Click" layoutX="47.0" layoutY="268.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="136.0" style="-fx-background-color: #F4A460;" text="LOGIN" />
-                  <Button id="btnCadastrarLogin" onMouseClicked="#btnCadastrarLogin_Click" layoutX="225.0" layoutY="268.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="136.0" style="-fx-background-color: #F4A460;" text="CADASTRAR" />
+                  <Button id="btnLogin" fx:id="btnLogin" layoutX="47.0" layoutY="268.0" mnemonicParsing="false" onMouseClicked="#btnLogin_Click" prefHeight="27.0" prefWidth="136.0" style="-fx-background-color: #F4A460;" text="LOGIN" />
+                  <Button id="btnCadastrarLogin" fx:id="btnCadastrarLogin" layoutX="225.0" layoutY="268.0" mnemonicParsing="false" onMouseClicked="#btnCadastrarLogin_Click" prefHeight="27.0" prefWidth="136.0" style="-fx-background-color: #F4A460;" text="CADASTRAR" />
                   <ImageView fitHeight="166.0" fitWidth="282.0" layoutX="115.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@Logo.png" />

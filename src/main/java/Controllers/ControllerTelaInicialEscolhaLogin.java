@@ -15,17 +15,17 @@ import java.io.IOException;
 
 public class ControllerTelaInicialEscolhaLogin {
     @FXML
-    private Button btn_Login;
-    private Button btn_CadastrarLogin;
-    private AnchorPane apEscolhaLogin;
+    private Button btn_Login, btn_CadastrarLogin;
 
     @FXML
-    public void FecharTela()
-    {
+    public AnchorPane apEscolhaLogin;
+
+    @FXML
+    public void EscondeTela() {
         Stage stage = (Stage) apEscolhaLogin.getScene().getWindow();
-        stage.close();
-        // nn funciona ainda
+        stage.hide();
     }
+
     public void CriaTelaCadastro() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("TelaCadastro.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
@@ -35,6 +35,7 @@ public class ControllerTelaInicialEscolhaLogin {
         stage.setScene(scene);
         stage.show();
     }
+
     public void CriaTelaLogin() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("TelaLogin.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
@@ -43,11 +44,17 @@ public class ControllerTelaInicialEscolhaLogin {
         stage.initStyle(StageStyle.UTILITY);
         stage.setScene(scene);
         stage.show();
+
+        stage.setOpacity(00);
     }
+
     public void btnLogin_Click(MouseEvent mouseEvent) throws IOException {
+        //EscondeTela();
         CriaTelaLogin();
     }
+
     public void btnCadastrarLogin_Click(MouseEvent mouseEvent) throws IOException {
+        //EscondeTela();
         CriaTelaCadastro();
     }
 }
