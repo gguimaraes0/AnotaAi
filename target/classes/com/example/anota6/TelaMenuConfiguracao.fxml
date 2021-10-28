@@ -4,7 +4,6 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -14,41 +13,37 @@
 
 <VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <TitledPane animated="false" text="ANOTA AÍ">
-         <content>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-         </content>
-      </TitledPane>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
       <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
-            <Pane prefHeight="437.0" prefWidth="216.0" style="-fx-background-color: #5b5b5b;">
+            <Pane prefHeight="437.0" prefWidth="216.0" style="-fx-background-color: #87CEFA;">
                <children>
-                  <Button id="btn_RelatorioMenuConfiguracao" fx:id="btn_RelatorioMenuConfiguracao" alignment="BASELINE_LEFT" layoutX="20.0" layoutY="193.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="178.0" style="-fx-background-color: #5b5b5b;" text="RELATÓRIO">
-                     <font>
-                        <Font name="System Bold Italic" size="12.0" />
-                     </font>
-                  </Button>
-                  <Button id="btn_EditarPerfilMenuConfiguracao" fx:id="btn_EditarPerfilMenuConfiguracao" alignment="BASELINE_LEFT" layoutX="20.0" layoutY="243.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="178.0" style="-fx-background-color: #5b5b5b;" text="EDITAR PERFIL">
-                     <font>
-                        <Font name="System Bold Italic" size="12.0" />
-                     </font>
-                  </Button>
-                  <Button id="btn_RegistrarMovimentacaoMenuConfiguracao" fx:id="btn_RegistrarMovimentacaoMenuConfiguracao" alignment="BASELINE_LEFT" layoutX="20.0" layoutY="292.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="188.0" style="-fx-background-color: #5b5b5b;" text="REGISTRAR MOVIMENTAÇÃO">
-                     <font>
-                        <Font name="System Bold Italic" size="12.0" />
-                     </font>
-                  </Button>
-                  <Button id="btn_ConfiguracaoMenuConfiguracao" fx:id="btn_ConfiguracaoMenuConfiguracao" alignment="BASELINE_LEFT" layoutX="20.0" layoutY="344.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="178.0" style="-fx-background-color: #5b5b5b;" text="CONFIGURAÇÕES">
-                     <font>
-                        <Font name="System Bold Italic" size="12.0" />
-                     </font>
-                  </Button>
-                  <Button id="btn_DeslogarConfiguracao" fx:id="btn_DeslogarConfiguracao" alignment="TOP_CENTER" layoutX="57.0" layoutY="397.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="115.0" style="-fx-background-color: #5b5b5b;" text="SAIR" underline="true" />
-                  <ImageView fitHeight="103.0" fitWidth="159.0" layoutX="35.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="129.0" fitWidth="136.0" layoutX="50.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../Área%20de%20Trabalho/Logo.png" />
+                        <Image url="@Logo.png" />
                      </image>
                   </ImageView>
+                  <Button id="btn_RelatorioMenuConfiguracao" fx:id="btn_RelatorioMenuConfiguracao" alignment="BASELINE_LEFT" layoutX="20.0" layoutY="193.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="178.0" style="-fx-background-color: #87CEFA;" text="RELATÓRIO">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button id="btn_EditarPerfilMenuConfiguracao" fx:id="btn_EditarPerfilMenuConfiguracao" alignment="BASELINE_LEFT" layoutX="20.0" layoutY="243.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="178.0" style="-fx-background-color: #87CEFA;" text="EDITAR PERFIL">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button id="btn_RegistrarMovimentacaoMenuConfiguracao" fx:id="btn_RegistrarMovimentacaoMenuConfiguracao" alignment="BASELINE_LEFT" layoutX="20.0" layoutY="292.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="188.0" style="-fx-background-color: #87CEFA;" text="REGISTRAR MOVIMENTAÇÃO">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button id="btn_ConfiguracaoMenuConfiguracao" fx:id="btn_ConfiguracaoMenuConfiguracao" alignment="BASELINE_LEFT" layoutX="20.0" layoutY="344.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="178.0" style="-fx-background-color: #87CEFA;" text="CONFIGURAÇÕES">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button id="btn_DeslogarConfiguracao" fx:id="btn_DeslogarConfiguracao" alignment="TOP_CENTER" layoutX="57.0" layoutY="397.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="115.0" style="-fx-background-color: #87CEFA;" text="SAIR" underline="true" />
                </children>
             </Pane>
             <Label id="lbl_NomeRegistrarGasto" alignment="CENTER" layoutX="248.0" layoutY="102.0" prefHeight="33.0" prefWidth="115.0" text="Idioma">
@@ -56,7 +51,7 @@
                   <Font name="System Bold Italic" size="15.0" />
                </font>
             </Label>
-            <Label id="lbl_UsuarioNome" alignment="CENTER" layoutX="56.0" layoutY="154.0" prefHeight="16.0" prefWidth="124.0" style="-fx-background-color: #5b5b5b;" text="nome">
+            <Label id="lbl_UsuarioNome" alignment="CENTER" layoutX="56.0" layoutY="154.0" prefHeight="16.0" prefWidth="124.0" style="-fx-background-color: #87CEFA;" text="nome">
                <font>
                   <Font name="System Bold Italic" size="14.0" />
                </font>
