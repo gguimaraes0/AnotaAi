@@ -1,0 +1,60 @@
+@Entity
+@Table(name="cliente")
+
+public class cliente{
+
+@Id
+@GeneratedValue(strategy=GenarationType.IDENTITY)
+private int id;
+
+@column
+private String nome;
+
+
+get set..
+}
+
+
+
+-----------------------------------
+
+class modelCliente{
+
+EntityManagerFactory emf;
+EntityManager em;
+
+	public modelCliente(){
+		emf = Persistence.createEntityManagerFactory("teste");
+		em = emf.createEntityManager();
+
+	}
+
+public void salvar(Cliente c){
+	em.get.Transaction().begin();
+	em.merge(c);
+	em.getTransaction().commit();
+	emf.close();
+}
+
+public voi remover(Cliente c){
+	em.get.Transaction().begin();
+	em.remove(c);
+	em.getTransaction().commit();
+	emf.close();
+	
+}
+
+
+public List<Clientes> listarTodos(){
+	em.get.Transaction().begin();
+	Query consulta = em.createQuery("Select cliente from Cliente cliente");
+	List<Cliente> clientes = consulta.getResultList();
+	em.getTransaction().commit();
+	emf.close();
+	return clientes;
+	
+
+}
+
+
+}
