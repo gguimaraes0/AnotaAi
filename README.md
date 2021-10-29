@@ -13,7 +13,7 @@ Anota Ai - Controle de Despesas, Aplicação para controle de despesas feito no 
 
 - IntelliJ IDEA 2021.2.2
 - JAVA SDK 11.0.11
-### Dependências do Projeto
+### 📦 Dependências do Projeto
 
 - org.openjfx 11.0.2
 - javafx-controls
