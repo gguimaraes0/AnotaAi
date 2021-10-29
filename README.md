@@ -33,9 +33,9 @@ Quantas vezes nos pegamos contando na cabeça o quanto ainda podemos gastar no m
 ## 💾 Banco de Dados 
 <a href="https://ibb.co/LpXhGHN"><img src="https://i.ibb.co/ZTp1Z72/bd.jpg" alt="bd" border="0"></a>
 
-
+<!-- 
 ## 💥 Informações 
 O Projeto
--- pegar foto do front para explicar parte
+-- pegar foto do front para explicar parte -->
 
 
