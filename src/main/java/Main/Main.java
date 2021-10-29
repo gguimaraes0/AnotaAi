@@ -17,7 +17,7 @@ public class Main extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Telas/TelaInicialEscolhaLogin.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         primaryStage.setTitle("Anota Aí");
-        primaryStage.initStyle(StageStyle.UTILITY);
+        //primaryStage.initStyle(StageStyle.UTILITY);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
