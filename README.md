@@ -1,7 +1,7 @@
 # AnotaAí
 Anota Ai - Controle de Despesas, Aplicação para controle de despesas feito no 6º Semestre de EC
 ##
-<a href="https://imgbb.com/"><img src="https://i.ibb.co/5KZXXY7/Anota-Logotipo-removebg-preview.png" alt="Anota-Logotipo-removebg-preview" border="0"></a>
+<a href="https://ibb.co/0syPnsw"><img src="https://i.ibb.co/0syPnsw/Anota-Logotipo-removebg-preview.png" alt="Anota-Logotipo-removebg-preview" border="0"></a>
 ## 👨‍💻  Participantes
 - Caio Foramiglio Vieira   - 081190043 
 - Guilherme Simon Lehr     - 081190002 
@@ -21,9 +21,9 @@ Anota Ai - Controle de Despesas, Aplicação para controle de despesas feito no 
 - hibernate-core 5.5.3.Final
 - mysql-connector-java 8.0.19
 
-## Banco de Dados
+## 💾 Banco de Dados 
 <a href="https://ibb.co/LpXhGHN"><img src="https://i.ibb.co/ZTp1Z72/bd.jpg" alt="bd" border="0"></a>
-# Anota Aí 📝
+# 📝 Anota Aí 
 
 -Explicar Workflow do projeto
 
