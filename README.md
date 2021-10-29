@@ -11,6 +11,10 @@ Anota Ai - Controle de Despesas, Aplicação para controle de despesas feito no 
 
 ## :hammer: Ambiente
 
+<div style="padding-left:200px;">
+ _____<a href= "mailto:gguimaraes1602@gmail.com"><img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" target="_blank"></a> _____
+<div/>
+
 - IntelliJ IDEA 2021.2.2
 - JAVA SDK 11.0.11
 ### 📦 Dependências do Projeto
