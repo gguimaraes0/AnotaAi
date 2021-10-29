@@ -1,0 +1,49 @@
+USE ANOTAAI
+
+CREATE TABLE login(
+IdUsuario int not null auto_increment, 
+Email varchar(50) not null,
+Senha varchar(50) not null,
+PRIMARY KEY (IdUsuario)
+)
+CREATE TABLE tipos(
+IdTipo int not null auto_increment,
+Nome varchar(50) not null,
+PRIMARY KEY (IdTipo)
+)
+
+CREATE TABLE instituicao_pagamento(
+IdInstituicao int not null auto_increment,
+Nome varchar(50) not null,
+PRIMARY KEY (IdInstituicao)
+)
+
+CREATE TABLE despesas(
+IdDespesa int not null auto_increment,
+IdUsuario int not null,
+Descricao varchar(50) not null,
+Valor varchar(50) not null,
+Tipo int not null,
+Data_Vencimento varchar(50) not null,
+InstituicaoPagamento int not null,
+Pago bool not null,
+PRIMARY KEY (IdDespesa),
+FOREIGN KEY (Tipo) REFERENCES tipos(IdTipo),
+FOREIGN KEY (IdUsuario) REFERENCES login(IdUsuario),
+FOREIGN KEY (InstituicaoPagamento) REFERENCES instituicao_pagamento(IdInstituicao)
+)
+
+CREATE TABLE receitas(
+IdReceita int not null auto_increment,
+IdUsuario int not null,
+Descricao varchar(50) not null,
+Valor varchar(50) not null,
+Tipo int not null,
+Data_Recebimento varchar(50) not null,
+InstituicaoPagamento int not null,
+Recebido bool not null,
+PRIMARY KEY (IdReceita),
+FOREIGN KEY (Tipo) REFERENCES tipos(IdTipo),
+FOREIGN KEY (IdUsuario) REFERENCES login(IdUsuario),
+FOREIGN KEY (InstituicaoPagamento) REFERENCES instituicao_pagamento(IdInstituicao)
+)
