@@ -1,11 +1,13 @@
 package common.VO;
 
 import javax.persistence.*;
-import common.generic.model;
+import java.io.Serializable;
 
-@Entity
-@Table(name = "tbCliente")
-public class Cliente extends model {
+@Entity(name = "tbCliente")
+public class Cliente implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;

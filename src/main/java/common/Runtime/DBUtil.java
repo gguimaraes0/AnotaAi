@@ -8,9 +8,6 @@ import javax.persistence.EntityManager;
 public class DBUtil {
 
     public static void criaDB() {
-
-        System.out.println("BANCO");
-        EntityManager em = SessionUtil.getSession();
         criaCliente();
         criaInstituicaoPagamento();
         criaTipo();
@@ -107,7 +104,6 @@ public class DBUtil {
             em.merge(safra);
             em.merge(pan);
             em.getTransaction().commit();
-
         } catch (Exception e) {
             em.getTransaction().rollback();
         }

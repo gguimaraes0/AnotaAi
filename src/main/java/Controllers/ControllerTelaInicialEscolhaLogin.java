@@ -1,11 +1,10 @@
 package Controllers;
 
-import com.example.anota6.HelloApplication;
+import Main.Main;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -15,19 +14,20 @@ import java.io.IOException;
 
 public class ControllerTelaInicialEscolhaLogin {
     @FXML
-    private Button btn_Login, btn_CadastrarLogin;
+    private Button btn_Login;
+    private Button btn_CadastrarLogin;
+    @FXML
+    private AnchorPane apEscolhaLogin;
 
     @FXML
-    public AnchorPane apEscolhaLogin;
-
-    @FXML
-    public void EscondeTela() {
+    public void FecharTela()
+    {
         Stage stage = (Stage) apEscolhaLogin.getScene().getWindow();
-        stage.hide();
+        stage.close();
+        // nn funciona ainda
     }
-
     public void CriaTelaCadastro() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("TelaCadastro.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/Telas/TelaCadastro.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = new Stage();
         stage.setTitle("Anota Aí - Cadastro");
@@ -35,26 +35,19 @@ public class ControllerTelaInicialEscolhaLogin {
         stage.setScene(scene);
         stage.show();
     }
-
     public void CriaTelaLogin() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("TelaLogin.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/Telas/TelaLogin.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = new Stage();
         stage.setTitle("Anota Aí - Login");
         stage.initStyle(StageStyle.UTILITY);
         stage.setScene(scene);
         stage.show();
-
-        stage.setOpacity(00);
     }
-
     public void btnLogin_Click(MouseEvent mouseEvent) throws IOException {
-        //EscondeTela();
         CriaTelaLogin();
     }
-
     public void btnCadastrarLogin_Click(MouseEvent mouseEvent) throws IOException {
-        //EscondeTela();
         CriaTelaCadastro();
     }
 }
