@@ -14,14 +14,10 @@ import java.io.IOException;
 
 public class ControllerTelaInicialEscolhaLogin {
     @FXML
-    private Button btn_Login;
-    private Button btn_CadastrarLogin;
-    @FXML
     private AnchorPane apEscolhaLogin;
 
     @FXML
-    public void FecharTela()
-    {
+    public void FecharTela() {
         Stage stage = (Stage) apEscolhaLogin.getScene().getWindow();
         stage.close();
         // nn funciona ainda
@@ -31,7 +27,7 @@ public class ControllerTelaInicialEscolhaLogin {
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = new Stage();
         stage.setTitle("Anota Aí - Cadastro");
-        stage.initStyle(StageStyle.UTILITY);
+        //stage.initStyle(StageStyle.UTILITY);
         stage.setScene(scene);
         stage.show();
     }
@@ -40,7 +36,7 @@ public class ControllerTelaInicialEscolhaLogin {
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = new Stage();
         stage.setTitle("Anota Aí - Login");
-        stage.initStyle(StageStyle.UTILITY);
+        //stage.initStyle(StageStyle.UTILITY);
         stage.setScene(scene);
         stage.show();
     }

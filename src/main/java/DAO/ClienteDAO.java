@@ -1,5 +1,6 @@
     package DAO;
 
+import com.mysql.cj.xdevapi.Client;
 import common.Runtime.SessionUtil;
 import common.VO.Cliente;
 
@@ -23,7 +24,7 @@ public class ClienteDAO {
     public static Cliente selectByEmail(String email) {
         try {
             EntityManager em = SessionUtil.getSession();
-            Query query = em.createQuery("from tbUsers where email =:email ")
+            Query query = em.createQuery("select c from tbCliente c where c.email = :email", Cliente.class)
                     .setParameter("email", email);
             Cliente cliente = (Cliente) query.getSingleResult();
             return cliente;
