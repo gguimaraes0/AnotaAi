@@ -18,13 +18,15 @@ import java.io.IOException;
 
 public class ControllerMenuInicial {
 
+    private Stage loginStage;
     @FXML
     private Button txt_Email;
     @FXML
+    private Label lbl_UsuarioNome;
+    @FXML
     private AnchorPane apEscolhaLogin;
-   //private Label lbl_UsuarioNome = this.;
-
-
+   //private Label lbl_UsuarioNome = this;
+   public Cliente cliente;
 
     public void FecharTelas() {
         Stage stageMenu = (Stage) apEscolhaLogin.getScene().getWindow();
@@ -33,6 +35,12 @@ public class ControllerMenuInicial {
         stageTelaLogin.close();
         stageMenu.close();
     }
+    public void initialize(Cliente cliente){
+        this.cliente = cliente;
+        this.lbl_UsuarioNome.setText(cliente.getnome());
+    }
 
-
+    void setLoginStage(Stage loginWindow) {
+        loginStage = loginWindow;
+    }
 }
