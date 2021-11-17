@@ -14,17 +14,20 @@ public class Receita implements Serializable {
     private int idReceita;
 
     @ManyToOne(optional = false)
+    @JoinColumn(name="cliente_id")
     private Cliente cliente;
 
     private String descricao;
     private String valor;
 
     @ManyToOne(optional = false)
+    @JoinColumn(name="tipo_idTipo")
     private Tipo tipo;
 
     private String data_recebimento;
 
     @ManyToOne(optional = false)
+    @JoinColumn(name="instituicao_pagamento_idInstituicaoPagamento")
     private InstituicaoPagamento instituicao_pagamento;
 
     private double recebido;

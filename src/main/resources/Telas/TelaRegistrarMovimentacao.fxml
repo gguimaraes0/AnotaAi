@@ -8,7 +8,7 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ControllerMenuInicial">
+<AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="437.0" prefWidth="645.0" VBox.vgrow="ALWAYS" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ControllerMenuInicial">
          <children>
             <Pane prefHeight="437.0" prefWidth="216.0" style="-fx-background-color: #5b5b5b;">
                <children>
@@ -90,46 +90,40 @@
                </font>
             </Label>
             <Line endX="-12.0" endY="273.0" layoutX="436.0" layoutY="110.0" startX="-12.0" startY="-32.0" />
-            <Label id="lbl_NomeRegistrarGanho" alignment="CENTER" layoutX="430.0" layoutY="110.0" prefHeight="17.0" prefWidth="57.0" text="Nome:">
+            <Label id="lbl_NomeRegistrarGanho" alignment="CENTER" layoutX="433.0" layoutY="110.0" prefHeight="17.0" prefWidth="57.0" text="Nome:">
                <font>
                   <Font name="System Bold Italic" size="12.0" />
                </font>
             </Label>
-            <TextField id="txt_NomeRegistrarGanho" fx:id="txt_NomeRegistrarGanho" layoutX="487.0" layoutY="106.0" prefHeight="25.0" prefWidth="124.0" />
-            <Button id="btn_SalvarGanho" fx:id="btn_SalvarReceita" layoutX="459.0" layoutY="370.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="136.0" text="REGISTRAR RECEITA" textFill="#009717">
+            <TextField id="txt_NomeRegistrarGanho" fx:id="txt_NomeRegistrarGanho" layoutX="500.0" layoutY="108.0" prefHeight="25.0" prefWidth="124.0" />
+            <Button id="btn_SalvarGanho" fx:id="btn_SalvarReceita" layoutX="459.0" layoutY="370.0" mnemonicParsing="false" onMouseClicked="#btn_SalvarReceita_click" prefHeight="27.0" prefWidth="136.0" text="REGISTRAR RECEITA" textFill="#009717">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Label id="lbl_ErrorEditar" fx:id="lbl_ErrorRegistrarGanho" alignment="CENTER" contentDisplay="TOP" layoutX="438.0" layoutY="269.0" prefHeight="97.0" prefWidth="178.0" textFill="RED">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Label>
-            <Label id="lbl_ValorMovimentoGanho" alignment="CENTER" layoutX="435.0" layoutY="144.0" prefHeight="17.0" prefWidth="47.0" text="Valor:">
+            <Label id="lbl_ValorMovimentoGanho" alignment="CENTER" layoutX="442.0" layoutY="144.0" prefHeight="17.0" prefWidth="47.0" text="Valor:">
                <font>
                   <Font name="System Bold Italic" size="12.0" />
                </font>
             </Label>
-            <TextField id="txt_ValorMovimentoGanho" fx:id="txt_ValorMovimentoGanho" layoutX="487.0" layoutY="142.0" prefHeight="25.0" prefWidth="124.0" />
-            <Label id="lbl_DescricaoMovimentoGanho" alignment="CENTER" layoutX="425.0" layoutY="178.0" prefHeight="17.0" prefWidth="63.0" text="Descrição:">
+            <TextField id="txt_ValorMovimentoGanho" fx:id="txt_ValorMovimentoGanho" layoutX="500.0" layoutY="142.0" prefHeight="25.0" prefWidth="124.0" />
+            <Label id="lbl_DescricaoMovimentoGanho" alignment="CENTER" layoutX="427.0" layoutY="178.0" prefHeight="17.0" prefWidth="63.0" text="Descrição:">
                <font>
                   <Font name="System Bold Italic" size="12.0" />
                </font>
             </Label>
-            <TextField id="txt_DescricaoMovimentoGanho" fx:id="txt_DescricaoMovimentoGanho" layoutX="487.0" layoutY="174.0" prefHeight="25.0" prefWidth="124.0" />
-            <Label id="lbl_TipoMovimentoGanho" alignment="CENTER" layoutX="433.0" layoutY="209.0" prefHeight="17.0" prefWidth="47.0" text="Tipo:">
+            <TextField id="txt_DescricaoMovimentoGanho" fx:id="txt_DescricaoMovimentoGanho" layoutX="500.0" layoutY="174.0" prefHeight="25.0" prefWidth="124.0" />
+            <Label id="lbl_TipoMovimentoGanho" alignment="CENTER" layoutX="442.0" layoutY="209.0" prefHeight="17.0" prefWidth="47.0">
                <font>
                   <Font name="System Bold Italic" size="12.0" />
                </font>
             </Label>
-            <TextField id="txt_TipoMovimentoGanho" fx:id="txt_TipoMovimentoGanho" layoutX="487.0" layoutY="206.0" prefHeight="25.0" prefWidth="124.0" />
-            <Label id="lbl_DataMovimentoGanho" alignment="CENTER" layoutX="436.0" layoutY="244.0" prefHeight="17.0" prefWidth="47.0" text="Data:">
+            <Label id="lbl_DataMovimentoGanho" alignment="CENTER" layoutX="442.0" layoutY="209.0" prefHeight="17.0" prefWidth="47.0" text="Data:">
                <font>
                   <Font name="System Bold Italic" size="12.0" />
                </font>
             </Label>
-            <TextField id="txt_DataMovimentoGanho" fx:id="txt_DataMovimentoGanho" layoutX="487.0" layoutY="240.0" prefHeight="25.0" prefWidth="124.0" />
+            <TextField id="txt_DataMovimentoGanho" fx:id="txt_DataMovimentoGanho" layoutX="500.0" layoutY="206.0" prefHeight="25.0" prefWidth="124.0" />
       <ChoiceBox fx:id="ch_TipoMovimentoGasto" layoutX="286.0" layoutY="206.0" prefHeight="25.0" prefWidth="124.0">
             <items>
                <FXCollections fx:factory="observableArrayList">
@@ -162,5 +156,42 @@
                </FXCollections>
             </items>
          </ChoiceBox>
+      <ChoiceBox fx:id="ch_TipoMovimentoGanho" layoutX="500.0" layoutY="240.0" prefHeight="25.0" prefWidth="124.0">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="Luz" />
+               <String fx:value="Telefone" />
+               <String fx:value="Internet" />
+               <String fx:value="Salário" />
+               <String fx:value="Investimentos" />
+               <String fx:value="Outros" />
+            </FXCollections>
+         </items>
+      </ChoiceBox>
+      <ChoiceBox fx:id="ch_TipoInstituicaoGanho" layoutX="500.0" layoutY="276.0" prefHeight="25.0" prefWidth="124.0">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="Itaú" />
+               <String fx:value="Banco do Brasil" />
+               <String fx:value="Caixa Econômica" />
+               <String fx:value="Santander" />
+               <String fx:value="Nubank" />
+               <String fx:value="Inter" />
+               <String fx:value="Bradesco" />
+               <String fx:value="Banco Safra" />
+               <String fx:value="Banco PAN" />
+            </FXCollections>
+         </items>
+      </ChoiceBox>
+      <Label layoutX="430.0" layoutY="279.0" text="Instituição:">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="451.0" layoutY="243.0" text="Tipo:">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
          </children>
       </AnchorPane>

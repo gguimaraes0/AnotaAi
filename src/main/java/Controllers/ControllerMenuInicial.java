@@ -2,11 +2,9 @@ package Controllers;
 
 import DAO.ClienteDAO;
 import DAO.DespesaDAO;
+import DAO.ReceitaDAO;
 import Main.Main;
-import common.VO.Cliente;
-import common.VO.Despesa;
-import common.VO.InstituicaoPagamento;
-import common.VO.Tipo;
+import common.VO.*;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -24,16 +22,45 @@ public class ControllerMenuInicial {
     private Stage loginStage;
     @FXML
     private Label lbl_UsuarioNome;
+    //campos despesa
     @FXML
     private ChoiceBox ch_TipoMovimentoGasto, ch_TipoInstituicao;
-    @FXML //campos despesa
+    @FXML
     private TextField txt_NomeRegistrarGasto, txt_ValorMovimentoGasto, txt_DescricaoMovimentoGasto, txt_ParcelasMovimentoGasto, txt_DataMovimentoGasto;
-    //@FXML //campos receita
-    //private TextField ;
+
+    //campos receita
+    @FXML
+    private TextField txt_NomeRegistrarGanho,txt_ValorMovimentoGanho, txt_DescricaoMovimentoGanho, txt_DataMovimentoGanho;
+    @FXML
+    private ChoiceBox ch_TipoMovimentoGanho, ch_TipoInstituicaoGanho;
     @FXML
     private AnchorPane apEscolhaLogin, apRegistrarMovimentacao;
     //private Label lbl_UsuarioNome = this;
     public Cliente cliente;
+
+    public void btn_SalvarReceita_click(MouseEvent mouseEvent) throws IOException {
+        addReceita();
+    }
+
+    public void addReceita() throws IOException {
+        String nomeGanho = txt_NomeRegistrarGanho.getText();
+        String valorGanho = txt_ValorMovimentoGanho.getText();
+        String descGanho = txt_DescricaoMovimentoGanho.getText();
+        String tipoGanho = ch_TipoMovimentoGanho.getValue().toString();
+        String instituicaoSelecGanho = ch_TipoInstituicaoGanho.getValue().toString();
+        String dataGanho = txt_DataMovimentoGanho.getText();
+
+        Receita novaReceita = new Receita();
+        novaReceita.setCliente(cliente);
+        novaReceita.setDescricao(nomeGanho + " | " + descGanho);
+        novaReceita.setData_recebimento(dataGanho);
+        novaReceita.setValor(valorGanho);
+        novaReceita.setTipo(pegaTipo(tipoGanho));
+        novaReceita.setInstituicaoPagamento(pegaInst(instituicaoSelecGanho));
+
+        ReceitaDAO daoReceita = new ReceitaDAO();
+        Boolean cadastro = daoReceita.insert(novaReceita);
+    }
 
     public void btn_AdicionaDespesa_click(MouseEvent mouseEvent) throws IOException {
         addDespesa();
