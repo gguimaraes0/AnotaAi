@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="apEditarTransacao" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="379.0" prefWidth="598.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ControllerMenuInicial">>
+   <children>
+      <AnchorPane id="apEditarTransacao" nodeOrientation="LEFT_TO_RIGHT" prefHeight="374.0" prefWidth="577.0" style="-fx-background-color: #87CEFA;">
+         <Pane layoutX="-1.0" prefHeight="379.0" prefWidth="600.0" style="-fx-background-color: #87CEFA;">
+         <children>
+            <Button fx:id="btn_Editar" layoutX="289.0" layoutY="322.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="63.0" style="-fx-background-color: #b6d7a8;" text="Editar" />
+            <Label layoutX="71.0" layoutY="58.0" text="Descrição" />
+            <TextField fx:id="txt_descricao" layoutX="203.0" layoutY="54.0" style="-fx-alignment: center;" />
+            <Label layoutX="68.0" layoutY="105.0" text="Valor" />
+            <Label layoutX="70.0" layoutY="147.0" text="Data" />
+            <Label layoutX="70.0" layoutY="197.0" text="Tipo" />
+            <Label layoutX="66.0" layoutY="243.0" text="Instui. de Pagamento" />
+            <TextField fx:id="txt_valor" layoutX="203.0" layoutY="101.0" style="-fx-alignment: center;" />
+            <TextField fx:id="txt_tipo" layoutX="203.0" layoutY="193.0" style="-fx-alignment: center;" />
+            <TextField fx:id="txtRecebidoPago" layoutX="203.0" layoutY="281.0" prefHeight="25.0" prefWidth="149.0" style="-fx-alignment: center;" />
+            <Label layoutX="70.0" layoutY="285.0" text="Recebido/Pago" />
+            <DatePicker id="dt_data" fx:id="dt_Data" layoutX="203.0" layoutY="143.0" prefHeight="25.0" prefWidth="149.0" />
+            <Button fx:id="btn_Voltar" layoutX="203.0" layoutY="322.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="63.0" style="-fx-background-color: #e06666;" text="Voltar" />
+            <ComboBox fx:id="cb_instpgmto" layoutX="203.0" layoutY="239.0" prefHeight="25.0" prefWidth="149.0" />
+         </children>
+         </Pane>
+      </AnchorPane>
+   </children>
+</AnchorPane>
