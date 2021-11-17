@@ -40,6 +40,11 @@ public class DBUtil {
             invest.setIdTipo(5);
             invest.setNome("Investimentos");
 
+            Tipo outros = new Tipo();
+            invest.setIdTipo(6);
+            invest.setNome("Outros");
+
+
             em.getTransaction().begin();
             em.merge(luz);
             em.merge(agua);
@@ -47,6 +52,7 @@ public class DBUtil {
             em.merge(internet);
             em.merge(salario);
             em.merge(invest);
+            em.merge(outros);
 
             em.getTransaction().commit();
         } catch (Exception e) {
@@ -59,7 +65,7 @@ public class DBUtil {
         try {
             InstituicaoPagamento itau = new InstituicaoPagamento();
             itau.setIdInstituicaoPagamento(1);
-            itau.setNome("Ítau");
+            itau.setNome("Itaú");
 
             InstituicaoPagamento bb = new InstituicaoPagamento();
             bb.setIdInstituicaoPagamento(2);
