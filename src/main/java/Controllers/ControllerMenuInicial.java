@@ -5,6 +5,7 @@ import DAO.DespesaDAO;
 import Main.Main;
 import common.VO.Cliente;
 import common.VO.Despesa;
+import common.VO.InstituicaoPagamento;
 import common.VO.Tipo;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -24,9 +25,9 @@ public class ControllerMenuInicial {
     @FXML
     private Label lbl_UsuarioNome;
     @FXML
-    private ChoiceBox ch_TipoMovimentoGasto;
+    private ChoiceBox ch_TipoMovimentoGasto, ch_TipoInstituicao;
     @FXML //campos despesa
-    private TextField txt_NomeRegistrarGasto, txt_ValorMovimentoGasto, txt_DescricaoMovimentoGasto, txt_TipoMovimentoGasto, txt_ParcelasMovimentoGasto, txt_DataMovimentoGasto;
+    private TextField txt_NomeRegistrarGasto, txt_ValorMovimentoGasto, txt_DescricaoMovimentoGasto, txt_ParcelasMovimentoGasto, txt_DataMovimentoGasto;
     //@FXML //campos receita
     //private TextField ;
     @FXML
@@ -40,12 +41,64 @@ public class ControllerMenuInicial {
 
     public void addDespesa() throws IOException {
         String nomeGasto = txt_NomeRegistrarGasto.getText();
-        String valorDespesa = txt_NomeRegistrarGasto.getText();
-        String descDespesa = txt_NomeRegistrarGasto.getText();
+        String valorDespesa = txt_ValorMovimentoGasto.getText();
+        String descDespesa = txt_DescricaoMovimentoGasto.getText();
         String tipoDespesa = ch_TipoMovimentoGasto.getValue().toString();
-        String parcelasDespesa = txt_NomeRegistrarGasto.getText();
-        String dataDespesa = txt_NomeRegistrarGasto.getText();
+        String instituicaoSelec = ch_TipoInstituicao.getValue().toString();
+        String parcelasDespesa = txt_ParcelasMovimentoGasto.getText();
+        String dataDespesa = txt_DataMovimentoGasto.getText();
 
+        Despesa novaDespesa = new Despesa();
+        novaDespesa.setCliente_id(cliente);
+        novaDespesa.setDescricao(nomeGasto + " | " + descDespesa);
+        novaDespesa.setDatavencimento(dataDespesa);
+        novaDespesa.setValor(valorDespesa);
+        novaDespesa.setTipo(pegaTipo(tipoDespesa));
+        novaDespesa.setInstituicaoPagamento(pegaInst(instituicaoSelec));
+
+        DespesaDAO daoDespesa = new DespesaDAO();
+        Boolean cadastro = daoDespesa.insert(novaDespesa);
+    }
+
+    private InstituicaoPagamento pegaInst(String instSelecNome){
+        Integer idInst = 6;
+        switch(instSelecNome){
+            case"Itaú":
+                idInst = 1;
+                break;
+            case"Banco do Brasil":
+                idInst = 2;
+                break;
+            case"Caixa Econômica":
+                idInst = 3;
+                break;
+            case"Santander":
+                idInst = 4;
+                break;
+            case"Nubank":
+                idInst = 5;
+                break;
+            case"Inter":
+                idInst = 6;
+                break;
+            case"Bradesco":
+                idInst = 7;
+                break;
+            case"Banco Safra":
+                idInst = 8;
+                break;
+            case"Banco PAN":
+                idInst = 9;
+                break;
+        }
+        InstituicaoPagamento instiSelec = new InstituicaoPagamento();
+        instiSelec.setNome(instSelecNome);
+        instiSelec.setIdInstituicaoPagamento(idInst);
+
+        return instiSelec;
+    }
+
+    private Tipo pegaTipo(String tipoDespesa){
         Integer idTipo = 6;
         switch(tipoDespesa){
             case"Luz":
@@ -67,18 +120,11 @@ public class ControllerMenuInicial {
                 idTipo = 6;
                 break;
         }
+        Tipo tipoSelec = new Tipo();
+        tipoSelec.setNome(tipoDespesa);
+        tipoSelec.setIdTipo(idTipo);
 
-        Despesa novaDespesa = new Despesa();
-        novaDespesa.setCliente(cliente.getId());
-        novaDespesa.setDescricao(descDespesa);
-        novaDespesa.setDatavencimento(dataDespesa);
-        novaDespesa.setValor(valorDespesa);
-        novaDespesa.setTipo(idTipo);
-        novaDespesa.setInstituicaoPagamento(2);
-
-        DespesaDAO daoDespesa = new DespesaDAO();
-        Boolean cadastro = daoDespesa.insert(novaDespesa);
-
+        return tipoSelec;
     }
 
     public void btn_RegistrarMovimentacaoMenu_click(MouseEvent mouseEvent) throws IOException {

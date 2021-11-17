@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.collections.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<?import javafx.collections.FXCollections?>
-<?import java.lang.String?>
 <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ControllerMenuInicial">
          <children>
             <Pane prefHeight="437.0" prefWidth="216.0" style="-fx-background-color: #5b5b5b;">
@@ -84,11 +84,6 @@
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Button>
-            <Label id="lbl_ErrorRegistrarGasto" fx:id="lbl_ErrorRegistrarGasto" alignment="CENTER" contentDisplay="TOP" layoutX="231.0" layoutY="301.0" prefHeight="65.0" prefWidth="178.0" textFill="RED">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Label>
             <Label id="lbl_TelefoneAlterar" alignment="CENTER" layoutX="302.0" layoutY="14.0" prefHeight="65.0" prefWidth="289.0" text="Registrar Movimentação" underline="true">
                <font>
                   <Font name="System Bold Italic" size="24.0" />
@@ -101,7 +96,7 @@
                </font>
             </Label>
             <TextField id="txt_NomeRegistrarGanho" fx:id="txt_NomeRegistrarGanho" layoutX="487.0" layoutY="106.0" prefHeight="25.0" prefWidth="124.0" />
-            <Button id="btn_SalvarGanho" fx:id="btn_SalvarGanho" layoutX="459.0" layoutY="370.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="136.0" text="REGISTRAR GANHO" textFill="#009717">
+            <Button id="btn_SalvarGanho" fx:id="btn_SalvarReceita" layoutX="459.0" layoutY="370.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="136.0" text="REGISTRAR RECEITA" textFill="#009717">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
@@ -135,7 +130,7 @@
                </font>
             </Label>
             <TextField id="txt_DataMovimentoGanho" fx:id="txt_DataMovimentoGanho" layoutX="487.0" layoutY="240.0" prefHeight="25.0" prefWidth="124.0" />
-      <ChoiceBox fx:id="ch_TipoMovimentoGasto" layoutX="286.0" layoutY="206.0" prefHeight="25.0" prefWidth="124.0" >
+      <ChoiceBox fx:id="ch_TipoMovimentoGasto" layoutX="286.0" layoutY="206.0" prefHeight="25.0" prefWidth="124.0">
             <items>
                <FXCollections fx:factory="observableArrayList">
                   <String fx:value="Luz" />
@@ -144,6 +139,26 @@
                   <String fx:value="Salário" />
                   <String fx:value="Investimentos" />
                   <String fx:value="Outros" />
+               </FXCollections>
+            </items>
+         </ChoiceBox>
+      <Label layoutX="220.0" layoutY="314.0" text="Instituição:">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="ch_TipoInstituicao" layoutX="287.0" layoutY="310.0" prefHeight="25.0" prefWidth="124.0">
+            <items>
+               <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Itaú" />
+                  <String fx:value="Banco do Brasil" />
+                  <String fx:value="Caixa Econômica" />
+                  <String fx:value="Santander" />
+                  <String fx:value="Nubank" />
+                  <String fx:value="Inter" />
+                  <String fx:value="Bradesco" />
+                  <String fx:value="Banco Safra" />
+                  <String fx:value="Banco PAN" />
                </FXCollections>
             </items>
          </ChoiceBox>
