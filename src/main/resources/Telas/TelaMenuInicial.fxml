@@ -56,7 +56,7 @@
                               <Font name="System Bold Italic" size="12.0" />
                            </font>
                         </Button>
-                        <Button id="btn_RegistrarMovimentacaoMenu" alignment="BASELINE_LEFT" layoutX="20.0" layoutY="292.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="188.0" style="-fx-background-color: #87CEFA;" text="REGISTRAR MOVIMENTAÇÃO">
+                        <Button id="btn_RegistrarMovimentacaoMenu" fx:id="btn_RegistrarMovimentacaoMenu" alignment="BASELINE_LEFT" layoutX="20.0" layoutY="292.0" mnemonicParsing="false" onMouseClicked="#btn_RegistrarMovimentacaoMenu_click" prefHeight="26.0" prefWidth="188.0" style="-fx-background-color: #87CEFA;" text="REGISTRAR MOVIMENTAÇÃO">
                            <font>
                               <Font name="System Bold Italic" size="12.0" />
                            </font>

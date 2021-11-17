@@ -11,19 +11,13 @@ public class Despesa implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idDespesa;
 
-    @ManyToOne(optional = false)
-    private Cliente cliente;
 
+    private Integer cliente;
     private String descricao;
     private String valor;
-
-    @ManyToOne(optional = false)
-    private Tipo tipo;
-
+    private Integer tipo;
     private String data_vencimento;
-
-    @ManyToOne(optional = false)
-    private InstituicaoPagamento instituicao_pagamento;
+    private Integer instituicao_pagamento;
 
     private double pago;
 
@@ -33,10 +27,10 @@ public class Despesa implements Serializable {
     public void setIdDespesa(int idDespesa) {
         this.idDespesa = idDespesa;
     }
-    public Cliente getCliente(){
+    public Integer getCliente(){
         return  cliente;
     }
-    public void setCliente(Cliente cliente){
+    public void setCliente(Integer cliente){
         this.cliente = cliente;
     }
     public String getDescricao(){
@@ -51,10 +45,10 @@ public class Despesa implements Serializable {
     public void setValor(String valor) {
         this.valor = valor;
     }
-    public Tipo getTipo() {
+    public Integer getTipo() {
         return tipo;
     }
-    public void setTipo(Tipo tipo) {
+    public void setTipo(Integer tipo) {
         this.tipo = tipo;
     }
     public String getDatavencimento() {
@@ -63,12 +57,13 @@ public class Despesa implements Serializable {
     public void setDatavencimento(String data_recebimento) {
         this.data_vencimento = data_recebimento;
     }
-    public InstituicaoPagamento getInstituicaoPagamento() {
+    public Integer getInstituicaoPagamento() {
         return instituicao_pagamento;
     }
-    public void setInstituicaoPagamento(InstituicaoPagamento instituicao_pagamento) {
+    public void setInstituicaoPagamento(Integer instituicao_pagamento) {
         this.instituicao_pagamento = instituicao_pagamento;
     }
+
     public double getPago() {
         return pago;
     }
