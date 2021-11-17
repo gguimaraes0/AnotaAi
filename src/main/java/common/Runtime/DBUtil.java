@@ -65,7 +65,7 @@ public class DBUtil {
         try {
             InstituicaoPagamento itau = new InstituicaoPagamento();
             itau.setIdInstituicaoPagamento(1);
-            itau.setNome("Ítau");
+            itau.setNome("Itaú");
 
             InstituicaoPagamento bb = new InstituicaoPagamento();
             bb.setIdInstituicaoPagamento(2);
