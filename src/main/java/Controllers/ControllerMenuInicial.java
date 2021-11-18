@@ -261,7 +261,11 @@ public class ControllerMenuInicial {
 
     public void initialize(Cliente cliente) {
         this.cliente = cliente;
-        //this.lbl_UsuarioNome.setText(cliente.getnome());
+    }
+
+    public void initializeUser(Cliente cliente) {
+        this.cliente = cliente;
+        this.lbl_UsuarioNome.setText(cliente.getnome());
     }
 
     void setLoginStage(Stage loginWindow) {

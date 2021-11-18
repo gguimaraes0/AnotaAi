@@ -43,13 +43,8 @@ public class ControllerTelaLogin {
         ClienteDAO clidao = new ClienteDAO();
         Cliente user =  clidao.selectByEmail(email);
 
-
-        if (email == "" && senha == "")
+        if(user == null || !user.getPassword().equals(senha))
         {
-            email = "ooo@ooo.com";
-            senha = "ooo";
-        }
-        if(user == null){//|| user.getPassword() != senha
             Alert a = new Alert(Alert.AlertType.WARNING);
             a.setContentText("Usuário ou senha incorreta!");
             a.showAndWait();
@@ -66,7 +61,7 @@ public class ControllerTelaLogin {
             // Define a pessoa no controller.
             ControllerMenuInicial controller = loader.getController();
             controller.setLoginStage(ControllerMenuInicial);
-            controller.initialize(user);
+            controller.initializeUser(user);
             ControllerMenuInicial.showAndWait();
 
 //            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/Telas/TelaMenuInicial.fxml"));
