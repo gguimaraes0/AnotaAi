@@ -10,32 +10,32 @@
 
 <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="437.0" prefWidth="645.0" VBox.vgrow="ALWAYS" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ControllerMenuInicial">
          <children>
-            <Pane prefHeight="437.0" prefWidth="216.0" style="-fx-background-color: #5b5b5b;">
+            <Pane prefHeight="437.0" prefWidth="216.0" style="-fx-background-color: #87CEFA;">
                <children>
-                  <Button id="btn_RelatorioMenuRegistrarGasto" fx:id="btn_RelatorioMenuRegistrarGasto" alignment="BASELINE_LEFT" layoutX="20.0" layoutY="193.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="178.0" style="-fx-background-color: #5b5b5b;" text="RELATÓRIO">
+                  <Button id="btn_RelatorioMenuRegistrarGasto" fx:id="btn_RelatorioMenuRegistrarGasto" alignment="BASELINE_LEFT" layoutX="20.0" layoutY="193.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="178.0" style="-fx-background-color: #87CEFA;" text="RELATÓRIO">
                      <font>
                         <Font name="System Bold Italic" size="12.0" />
                      </font>
                   </Button>
-                  <Button id="btn_EditarPerfilMenuRegistrarGasto" fx:id="btn_EditarPerfilMenuRegistrarGasto" alignment="BASELINE_LEFT" layoutX="20.0" layoutY="243.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="178.0" style="-fx-background-color: #5b5b5b;" text="EDITAR PERFIL">
+                  <Button id="btn_EditarPerfilMenuRegistrarGasto" fx:id="btn_EditarPerfilMenuRegistrarGasto" alignment="BASELINE_LEFT" layoutX="20.0" layoutY="243.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="178.0" style="-fx-background-color: #87CEFA;" text="EDITAR PERFIL">
                      <font>
                         <Font name="System Bold Italic" size="12.0" />
                      </font>
                   </Button>
-                  <Button id="btn_RegistrarMovimentacaoMenu" fx:id="btn_RegistrarMovimentacaoMenuRegistrarGasto" alignment="BASELINE_LEFT" layoutX="20.0" layoutY="292.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="188.0" style="-fx-background-color: #5b5b5b;" text="REGISTRAR MOVIMENTAÇÃO">
+                  <Button id="btn_RegistrarMovimentacaoMenu" fx:id="btn_RegistrarMovimentacaoMenuRegistrarGasto" alignment="BASELINE_LEFT" layoutX="20.0" layoutY="292.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="188.0" style="-fx-background-color: #87CEFA;" text="REGISTRAR MOVIMENTAÇÃO">
                      <font>
                         <Font name="System Bold Italic" size="12.0" />
                      </font>
                   </Button>
-                  <Button id="btn_ConfiguracaoMenuRegistrarGasto" fx:id="btn_ConfiguracaoMenuRegistrarGasto" alignment="BASELINE_LEFT" layoutX="20.0" layoutY="344.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="178.0" style="-fx-background-color: #5b5b5b;" text="CONFIGURAÇÕES">
+                  <Button id="btn_ConfiguracaoMenuRegistrarGasto" fx:id="btn_ConfiguracaoMenuRegistrarGasto" alignment="BASELINE_LEFT" layoutX="20.0" layoutY="344.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="178.0" style="-fx-background-color: #87CEFA;" text="CONFIGURAÇÕES">
                      <font>
                         <Font name="System Bold Italic" size="12.0" />
                      </font>
                   </Button>
-                  <Button id="btn_DeslogarEditarRegistrarGasto" fx:id="btn_DeslogarEditarRegistrarGasto" alignment="TOP_CENTER" layoutX="57.0" layoutY="397.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="115.0" style="-fx-background-color: #5b5b5b;" text="SAIR" underline="true" />
-                  <ImageView fitHeight="103.0" fitWidth="159.0" layoutX="35.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+                  <Button id="btn_DeslogarEditarRegistrarGasto" fx:id="btn_DeslogarEditarRegistrarGasto" alignment="TOP_CENTER" layoutX="57.0" layoutY="397.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="115.0" style="-fx-background-color: #87CEFA;" text="SAIR" underline="true" />
+                  <ImageView fitHeight="103.0" fitWidth="159.0" layoutX="57.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-
+                        <Image url="@Logo.png" />
                      </image>
                   </ImageView>
                </children>
@@ -45,7 +45,7 @@
                   <Font name="System Bold Italic" size="12.0" />
                </font>
             </Label>
-            <Label id="lbl_UsuarioNome" alignment="CENTER" layoutX="56.0" layoutY="154.0" prefHeight="16.0" prefWidth="124.0" style="-fx-background-color: #5b5b5b;" text="nome">
+            <Label fx:id="lbl_UsuarioNome" alignment="CENTER" layoutX="56.0" layoutY="154.0" prefHeight="16.0" prefWidth="124.0" style="-fx-background-color: #87CEFA;" text="Desenvolvedores">
                <font>
                   <Font name="System Bold Italic" size="14.0" />
                </font>

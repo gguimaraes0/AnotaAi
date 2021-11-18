@@ -41,7 +41,7 @@
             <children>
                   <Pane prefHeight="460.0" prefWidth="216.0" style="-fx-background-color: #87CEFA;">
                      <children>
-                        <Label fx:id="lbl_UsuarioNome" alignment="CENTER" layoutX="31.0" layoutY="144.0" prefHeight="20.0" prefWidth="161.0" style="-fx-background-color: #87CEFA;" text="Nome do Cliente">
+                        <Label fx:id="lbl_UsuarioNome" alignment="CENTER" layoutX="31.0" layoutY="144.0" prefHeight="20.0" prefWidth="161.0" style="-fx-background-color: #87CEFA;" text="Desenvolvedores">
                            <font>
                               <Font name="System Bold Italic" size="14.0" />
                            </font>

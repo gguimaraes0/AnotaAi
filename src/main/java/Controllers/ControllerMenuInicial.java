@@ -221,7 +221,7 @@ public class ControllerMenuInicial {
         // Define a pessoa no controller.
         ControllerMenuInicial controller = loader.getController();
         controller.setLoginStage(ControllerMenuInicial);
-        controller.initialize(cliente);
+        controller.initializeUser(cliente);
         ControllerMenuInicial.showAndWait();
     }
 
@@ -237,7 +237,7 @@ public class ControllerMenuInicial {
         // Define a pessoa no controller.
         ControllerMenuInicial controller = loader.getController();
         controller.setLoginStage(ControllerMenuInicial);
-        controller.initialize(cliente);
+        controller.initializeUser(cliente);
         ControllerMenuInicial.showAndWait();
     }
 
